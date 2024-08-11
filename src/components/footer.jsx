@@ -14,41 +14,59 @@ import { Container } from "./ui/Container";
 const Footer = () => {
   return (
     <div className="bg-[#15624C] w-full overflow-x-hidden ">
-      <Container className={`py-[68px] flex text-white`}>
-        <div className="w-[40%]">
+      <Container
+        className={`py-[68px]  text-white    flex md:justify-center gap-8 mb-12 flex-col md:flex-row`}
+      >
+        <div className="w-full md:w-[40%]">
           <h3 className="text-[32px] font-semibold mb-[20px]">
             Subscribe to our newsletter
           </h3>
-          <input
-            type="email"
-            className="w-[318px] h-[40px] p-2 rounded-[8px] mr-[16px] outline-none focus:outline-2 focus:outline-white/5"
-            placeholder="Email address"
-          />
-          <Button variant={"secondary"} className={"border-white text-white"}>
-            Subscribe
-          </Button>
+          <div className="flex md:flex-row flex-col gap-4 ">
+            <input
+              type="email"
+              className="w-[90%] md:w-[80%] h-[40px] p-2 rounded-[8px]  outline-none focus:outline-2 focus:outline-white/5"
+              placeholder="Email address"
+            />
+            <Button
+              variant={"secondary"}
+              className={
+                "w-[90%] md:w-fit border-white text-white hover:bg-[white]/10"
+              }
+            >
+              Subscribe
+            </Button>
+          </div>
         </div>
 
-        <div className="w-[30%] border-l-[0.5px] border-l-[#fff]">
-          <ul className="w-full h-full flex justify-center flex-col px-10 gap-2  [&_a:hover]:text-white/60">
-            <li>
-              <a href="/" className="flex space-x-4 items-center ">
+        <div className="w-full md:w-[30%] md:border-l-[0.5px] md:border-l-[#fff]">
+          <ul className="w-full h-full flex justify-center flex-col md:px-10 gap-2  [&_a:hover]:text-white/60">
+            <li className="w-full">
+              <a
+                href="/"
+                className=" text-nowrap flex space-x-4 md:items-center "
+              >
                 <span className="mr-4">
                   <Mail size={20} />
                 </span>
                 info@AgroInvest.com
               </a>
             </li>
-            <li>
-              <a href="/" className="flex space-x-4 items-center ">
+            <li className="w-full">
+              <a
+                href="/"
+                className=" text-nowrap md:text-wrap flex space-x-4 md:items-center "
+              >
                 <span className="mr-4">
                   <Phone size={20} />
                 </span>
                 (233) 958-2345
               </a>
             </li>
-            <li>
-              <a href="/" className="flex space-x-4 items-center ">
+            <li className="w-full">
+              <a
+                href="/"
+                className=" text-nowrap flex space-x-4 md:items-center "
+              >
                 <span className="mr-4">
                   <MapPin size={20} />
                 </span>
@@ -57,8 +75,8 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="w-[30%] border-l-[0.5px] border-l-[#fff] flex flex-col ">
-          <ul className="w-full h-fit px-10  flex-col [&_a:hover]:text-white/60 grid grid-cols-2 gap-2">
+        <div className="gap-4 w-full md:w-[30%] md:border-l-[0.5px] md:border-l-[#fff] flex flex-col ">
+          <ul className="w-full h-fit md:px-10  flex-col [&_a:hover]:text-white/60 grid grid-cols-2 gap-2">
             <li>
               <a href="/">FAQs</a>
             </li>
@@ -72,7 +90,7 @@ const Footer = () => {
               <a href="/">Contact Us</a>
             </li>
           </ul>
-          <ul className="w-full h-full items-end px-10 justify-start flex  [&_a:hover]:text-white/60 [&_li]:mr-3 mt-auto">
+          <ul className="w-full h-full items-end md:px-10 justify-start flex  [&_a:hover]:text-white/60 [&_li]:mr-3 mt-auto">
             <li>
               <a href="/">
                 <Facebook size={20} />

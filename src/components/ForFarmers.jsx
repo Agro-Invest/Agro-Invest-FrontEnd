@@ -32,7 +32,7 @@ const farmerCards = [
 const FarmerCard = ({ imgUrl, title, description, link }) => (
   <a
     href={link}
-    className="group block w-[400px] h-[400px] relative overflow-hidden rounded-2xl transition-transform duration-300 ease-in-out hover:scale-105"
+    className="group block w-full md:w-[400px] h-[400px] relative overflow-hidden rounded-2xl transition-transform duration-300 ease-in-out hover:scale-105"
   >
     <img
       src={imgUrl}
@@ -54,7 +54,7 @@ const ForFarmers = () => {
           <Tag variant="secondary" className="mb-4">
             For Farmers
           </Tag>
-          <h2 className="text-5xl font-semibold mb-4">
+          <h2 className="text-5xl font-semibold mb-4 text-[#15624C]">
             Maximise your farming expertise
           </h2>
           <p className="text-gray-600">
@@ -65,7 +65,7 @@ const ForFarmers = () => {
           </p>
         </div>
 
-        <div className="flex  justify-center gap-8 mb-12">
+        <div className="flex items-center  md:justify-center gap-8 mb-12 flex-col md:flex-row ">
           {farmerCards.map((card, index) => (
             <FarmerCard key={index} {...card} />
           ))}

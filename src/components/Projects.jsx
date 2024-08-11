@@ -12,30 +12,25 @@ const projects = [
     imgUrl: projects1,
     title: "Tomato farm",
     location: "Northern region",
-    description:
-      "Share your farming journey, upload project details, and track investor interest.",
   },
   {
     imgUrl: projects2,
     title: "Corn field",
     location: "Southern region",
-    description:
-      "Pre-order system ensures your produce finds a buyer before harvest.",
   },
   {
     imgUrl: projects3,
-    title: "Apple orchard",
+    title: "Onion farm",
     location: "Eastern region",
-    description: "Explore a range of credit packages tailored to your needs.",
   },
 ];
 
-const FarmCard = ({ imgUrl, title, location, description }) => {
+const FarmCard = ({ imgUrl, title, location }) => {
   return (
-    <div className="w-[400px] rounded-2xl overflow-hidden shadow-sm bg-white ">
+    <div className=" w-full md:w-[400px] rounded-2xl overflow-hidden shadow-lg bg- border-px border-[black]/5 ">
       <img className="w-full h-48 object-cover" src={imgUrl} alt={title} />
       <div className="px-6 py-6">
-        <h4 className="font-bold text-lg mb-1">{title}</h4>
+        <h4 className="font-bold text-lg mb-1 ">{title}</h4>
         <p className="text-gray-500 text-sm flex items-center mb-4">
           <MapPin className="mr-1" size={16} />
           {location}
@@ -57,9 +52,9 @@ const Projects = () => {
   return (
     <div id="projects">
       <Container className="flex justify-start py-[64px] flex-col">
-        <div className="flex items-start flex-col max-w-[800px] mr-auto space-y-4">
+        <div className="flex items-start flex-col max-w-[800px] mr-auto space-y-4 mb-12">
           <Tag variant="secondary">Projects</Tag>
-          <h3 className="text-[48px] font-semibold leading-none">
+          <h3 className="text-[48px] font-semibold leading-none text-[#15624C]">
             Invest into the future of Agriculture
           </h3>
           <p className="text-[#898483]">
@@ -70,7 +65,7 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="flex  justify-start gap-6 mt-8">
+        <div className="flex items-center  md:justify-center gap-8 mb-12 flex-col md:flex-row">
           {projects.map((project, index) => (
             <FarmCard
               key={index}
