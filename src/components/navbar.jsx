@@ -6,7 +6,10 @@ const Navbar = () => {
     <div className="bg-[#F2F2F7] h-[80px] w-full overflow-x-hidden ">
       <Container className={`flex justify-between w-full h-full items-center`}>
         <h4 className="font-bold text-[#15624C] text-[28px]">
-          Agro<span className="text-[#1EB45E]">Invest</span>
+          <a href="/">
+            {" "}
+            Agro<span className="text-[#1EB45E]">Invest</span>
+          </a>
         </h4>
         <nav className=" ml-auto mr-[40px]">
           <ul className="flex space-x-4  ">
@@ -18,7 +21,7 @@ const Navbar = () => {
             </li>
             <li>
               {" "}
-              <a href="#projects">Browse projects</a>
+              <a href="/browseprojects">Browse projects</a>
             </li>
             <li>
               {" "}
