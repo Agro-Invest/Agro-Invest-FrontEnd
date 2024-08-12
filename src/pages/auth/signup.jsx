@@ -3,7 +3,6 @@ import { Button } from "../../components/ui/CustomButton";
 import { Label } from "../../components/ui/label";
 import { RadioGroup, RadioGroupItem } from "../../components/ui/radio-group";
 import { Input } from "../../components/ui/input";
-import { redirect } from "react-router-dom";
 
 const SignUp = () => {
   const [state, setState] = useState("");
