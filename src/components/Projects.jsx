@@ -1,7 +1,7 @@
 import React from "react";
 import { Tag } from "./ui/Tag";
 import { Container } from "./ui/Container";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/CustomButton";
 import { MapPin } from "lucide-react";
 import projects1 from "../assets/images/projects-1.png";
 import projects2 from "../assets/images/projects-2.png";

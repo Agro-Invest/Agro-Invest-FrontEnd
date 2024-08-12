@@ -3,18 +3,8 @@ import ProjectCard from "./ProjectCard";
 import projects1 from "../assets/images/projects-1.png";
 import projects2 from "../assets/images/projects-2.png";
 import projects3 from "../assets/images/projects-3.png";
-import {
-  BellDot,
-  Filter,
-  FilterIcon,
-  LucideFilterX,
-  LucideSortDesc,
-  SortAscIcon,
-  SortDesc,
-  SortDescIcon,
-  UserCircle2,
-} from "lucide-react";
-import { Button } from "./ui/Button";
+import { BellDot, SortDescIcon, UserCircle2 } from "lucide-react";
+import { Button } from "./ui/CustomButton";
 
 function ProjectManagement() {
   const [searchTerm, setSearchTerm] = useState("");

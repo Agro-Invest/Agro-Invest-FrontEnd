@@ -8,7 +8,7 @@ import {
   Pin,
   TwitterIcon,
 } from "lucide-react";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/CustomButton";
 import { Container } from "./ui/Container";
 
 const Footer = () => {

@@ -1,5 +1,5 @@
 import { Container } from "./ui/Container";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/CustomButton";
 
 const Navbar = () => {
   return (
@@ -30,8 +30,16 @@ const Navbar = () => {
           </ul>
         </nav>
         <div className="space-x-4">
-          <Button variant={"secondary"}>Log in</Button>
-          <Button variant={"primary"}>Sign up</Button>
+          <Button variant={"secondary"}>
+            <a href="/signin" className="w-full h-full">
+              Log in
+            </a>
+          </Button>
+          <Button variant={"primary"}>
+            <a href="/signup" className="w-full h-full">
+              Sign up
+            </a>
+          </Button>
         </div>
       </Container>
     </div>

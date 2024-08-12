@@ -1,7 +1,7 @@
 import React from "react";
 import { Tag } from "./ui/Tag";
 import { Container } from "./ui/Container";
-import { Button } from "./ui/Button";
+import { Button } from "./ui/CustomButton";
 import forFarmers1 from "../assets/images/for-farmers-1.png";
 import forFarmers2 from "../assets/images/for-farmers-2.png";
 import forFarmers3 from "../assets/images/for-farmers-3.png";
