@@ -16,7 +16,7 @@ const Hero = () => {
           <h1 className="font-semibold text-[96px] leading-none w-full">
             Empowering Agriculture Through Investments
           </h1>
-          <p className="text-[18px] w-1/2  ">
+          <p className="text-[18px] w-1/2 ">
             We connect farmers with investers accross the world to promote
             agricultural growth and for a sustainable future
           </p>
