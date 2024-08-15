@@ -1,17 +1,18 @@
-import { Outlet } from "react-router-dom"
-import Footer from "../components/footer"
-import Navbar from "../components/navbar"
-
-
-
-
+import { Outlet, useLocation } from "react-router-dom";
+import Footer from "../components/footer";
+import Navbar from "../components/navbar";
 
 const RootLayout = () => {
-  return <>
-    <Navbar/>
-    <Outlet/>
-    <Footer/>
-  </>
-}
+  const pathname = useLocation().pathname;
+  console.log(pathname);
 
-export default RootLayout
+  return (
+    <main className="w-screen min-h-screen overflow-x-hidden">
+      {pathname === "/browseProjects" ? null : <Navbar />}
+      <Outlet />
+      {pathname === "/browseProjects" ? null : <Footer />}
+    </main>
+  );
+};
+
+export default RootLayout;

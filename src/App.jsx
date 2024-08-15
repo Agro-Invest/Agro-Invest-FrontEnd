@@ -8,7 +8,7 @@ import MemAccounts from "./pages/memAccounts"
 import Lobby from "./pages/lobby"
 import InvestInProject from "./pages/investInProject"
 import SignIn from "./pages/auth/signIn"
-import SignUp from "./pages/auth/signup"
+import SignUp from "./pages/auth/signhttps://github.com/Agro-Invest/Agro-Invest-FrontEnd/pull/13/conflict?name=src%252FApp.jsx&ancestor_oid=2953f6da9b8e451290c81cba8e6a1a6770804cfb&base_oid=f62ec463f5d9c908eaf015b592c51a2ac7cf76ff&head_oid=2e1c248799826896d38217b41bf4452e20e16d67up"
 import DashboardLayout from "./pages/dashboard/layout"
 import Dashboard from "./pages/dashboard/pages/dashboard"
 import ProjectMgt from "./pages/dashboard/pages/projectMgt"
@@ -102,13 +102,22 @@ const router = createBrowserRouter([
 
 ])
 
+  {
+    path: "signin",
+    element: <SignIn />,
+  },
+  {
+    path: "signup",
+    element: <SignUp />,
+  },
+]);
 
 function App() {
-    return (
-        <>
-            <RouterProvider router={router} />
-        </>
-    )
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
 }
 
-export default App
+export default App;
