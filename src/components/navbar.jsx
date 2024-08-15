@@ -1,5 +1,5 @@
 import { Container } from "./ui/Container";
-import { Button } from "./ui/CustomButton";
+import { Button } from "./ui/Button";
 
 const Navbar = () => {
   return (

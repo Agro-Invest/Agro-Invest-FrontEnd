@@ -4,7 +4,7 @@ import projects1 from "../assets/images/projects-1.png";
 import projects2 from "../assets/images/projects-2.png";
 import projects3 from "../assets/images/projects-3.png";
 import { BellDot, SortDescIcon, UserCircle2 } from "lucide-react";
-import { Button } from "./ui/CustomButton";
+import { Button } from "./ui/Button";
 
 function ProjectManagement() {
   const [searchTerm, setSearchTerm] = useState("");
