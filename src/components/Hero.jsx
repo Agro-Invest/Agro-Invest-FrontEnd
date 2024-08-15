@@ -1,7 +1,7 @@
 import React from "react";
 import bgUrl from "../assets/images/hero.png";
 import { Container } from "./ui/Container";
-import { Button } from "./ui/CustomButton";
+import { Button } from "./ui/Button";
 import { Tag } from "./ui/Tag";
 const Hero = () => {
   return (
