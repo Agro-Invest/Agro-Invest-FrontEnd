@@ -9,6 +9,13 @@ import Lobby from "./pages/lobby"
 import InvestInProject from "./pages/investInProject"
 import SignIn from "./pages/auth/signIn"
 import SignUp from "./pages/auth/signup"
+import DashboardLayout from "./pages/dashboard/layout"
+import Dashboard from "./pages/dashboard/pages/dashboard"
+import ProjectMgt from "./pages/dashboard/pages/projectMgt"
+import FinancialServices from "./pages/dashboard/pages/financialServices"
+import SelectRole from "./pages/selectRole"
+import CreateAccount from "./pages/createAccount"
+import MoreDetails from "./pages/moreDetails"
 
 
 
@@ -47,6 +54,10 @@ const router = createBrowserRouter([
                 path: "invest",
                 element: <InvestInProject/>
             },
+            {
+                path: "moredetails",
+                element: <MoreDetails/>
+            },
             
         ]
     },
@@ -60,6 +71,34 @@ const router = createBrowserRouter([
         element: <SignUp/>
     },
    
+    {
+        path: "/dashboard", 
+        element: <DashboardLayout/>,
+        children:[
+            {
+                index: true,
+                element: <Dashboard/>
+            },
+            {
+                path: "projectmanagement",
+                element: <ProjectMgt/>
+            },
+            {
+                path: "financialservices",
+                element: <FinancialServices/>
+            },
+        ]
+    },
+
+
+    {
+        path: "selectrole",
+        element: <SelectRole/>
+    },
+    {
+        path: "createaccount",
+        element: <CreateAccount/>
+    }
 
 ])
 
