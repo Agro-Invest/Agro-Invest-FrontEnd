@@ -1,9 +1,17 @@
 import { Container } from "./ui/Container";
 import { Button } from "./ui/Button";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleSignIn = () => {
+    navigate("/signin");
+  };
+
   return (
-    <div className="bg-[#F2F2F7] h-[80px] w-full overflow-x-hidden ">
+    <div className="bg-[#F2F2F7] h-[80px] w-full overflow-x-hidden">
       <Container className={`flex justify-between w-full h-full items-center`}>
         <h4 className="font-bold text-[#15624C] text-[28px]">
           <a href="/">
@@ -11,6 +19,7 @@ const Navbar = () => {
             Agro<span className="text-[#1EB45E]">Invest</span>
           </a>
         </h4>
+
         <nav className=" ml-auto mr-[40px]">
           <ul className="flex space-x-4  ">
             <li>
@@ -21,7 +30,7 @@ const Navbar = () => {
             </li>
             <li>
               {" "}
-              <a href="/browseProjects">Browse projects</a>
+              <a href="/browse">Browse projects</a>
             </li>
             <li>
               {" "}
@@ -29,18 +38,23 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
+
         <div className="space-x-4">
-          <Button variant={"secondary"}>
-            <a href="/signin" className="w-full h-full">
+          <Button 
+          onClick={handleSignIn}
+          variant={"secondary"}>
+            <span className="w-full h-full">
               Log in
-            </a>
+            </span>
           </Button>
+
           <Button variant={"primary"}>
-            <a href="/signup" className="w-full h-full">
+            <a href="/selectrole" className="w-full h-full">
               Sign up
             </a>
           </Button>
         </div>
+
       </Container>
     </div>
   );

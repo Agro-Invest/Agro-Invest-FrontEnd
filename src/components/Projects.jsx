@@ -6,6 +6,7 @@ import { MapPin } from "lucide-react";
 import projects1 from "../assets/images/projects-1.png";
 import projects2 from "../assets/images/projects-2.png";
 import projects3 from "../assets/images/projects-3.png";
+import { useNavigate } from "react-router-dom";
 
 const projects = [
   {
@@ -26,6 +27,13 @@ const projects = [
 ];
 
 const FarmCard = ({ imgUrl, title, location }) => {
+
+    const navigate = useNavigate();
+
+    const handleInvest = () => {
+      navigate("/signin")
+    }
+
   return (
     <div className=" w-full md:w-[400px] rounded-2xl overflow-hidden shadow-lg bg- border-px border-[black]/5 ">
       <img className="w-full h-48 object-cover" src={imgUrl} alt={title} />
@@ -39,7 +47,9 @@ const FarmCard = ({ imgUrl, title, location }) => {
           <Button variant="secondary" className="w-[48%]">
             Lobby
           </Button>
-          <Button variant="primary" className="w-[48%]">
+          <Button 
+          onClick={handleInvest}
+          variant="primary" className="w-[48%]">
             Invest
           </Button>
         </div>

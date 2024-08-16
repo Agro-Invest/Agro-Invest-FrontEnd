@@ -2,15 +2,22 @@ import Background from "./pics/background.png";
 import MailIcon from "../pages/dashboard/icons/mailIcon.png";
 import React, { useState } from 'react';
 import { Eye, EyeOff } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 
 const CreateAccount = () => {
 
     const [passwordVisible, setPasswordVisible] = useState(false);
+    const navigate = useNavigate();
+
 
     const togglePasswordVisibility = () => {
         setPasswordVisible(!passwordVisible);
     };
+
+    const handleToDashboard = () => {
+        navigate("/dashboard");
+      };
 
     return (
         <div className="relative bg-[#135c47] h-screen w-full">
@@ -83,6 +90,7 @@ const CreateAccount = () => {
                         </div>
 
                         <button
+                        onClick={handleToDashboard}
                             type="submit"
                             className="h-12 w-full bg-[#23d46f] text-white py-2 rounded-lg hover:bg-[#1fa45b] transition-colors duration-300">
                             Continue
