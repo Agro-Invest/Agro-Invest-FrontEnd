@@ -5,6 +5,7 @@ import { Button } from "./ui/Button";
 import forFarmers1 from "../assets/images/for-farmers-1.png";
 import forFarmers2 from "../assets/images/for-farmers-2.png";
 import forFarmers3 from "../assets/images/for-farmers-3.png";
+import { useNavigate } from "react-router-dom";
 
 const farmerCards = [
   {
@@ -46,7 +47,16 @@ const FarmerCard = ({ imgUrl, title, description, link }) => (
   </a>
 );
 
+
+
 const ForFarmers = () => {
+
+  const navigate = useNavigate();
+
+  const handleCreateProject = () => {
+    navigate("/signin");
+  };
+
   return (
     <section id="for-farmers" className="bg-white py-16">
       <Container>
@@ -72,7 +82,9 @@ const ForFarmers = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="primary" className="px-16">
+          <Button 
+          onClick={handleCreateProject}
+          variant="primary" className="px-16">
             Create project
           </Button>
         </div>

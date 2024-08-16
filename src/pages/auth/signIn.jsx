@@ -1,8 +1,16 @@
 import { Button } from "../../components/ui/Button";
 import { Input } from "../../components/ui/input";
 import { Label } from "../../components/ui/label";
+import { useNavigate } from "react-router-dom";
 
 const SignIn = () => {
+
+const navigate = useNavigate();
+
+  const handledashboard = () => {
+    navigate("/dashboard");
+  };
+
   return (
     <div className=" bg-[url(./grid.png)] w-full bg-cover bg-center bg-green-800 min-h-screen relative overflow-y-hidden">
       <img
@@ -26,14 +34,19 @@ const SignIn = () => {
           <Input type="email" id="email" placeholder="Enter email" />
           <Label htmlFor="name">Password</Label>
           <Input type="password" id="password" placeholder="Create password" />
-          <Button variant={"primary"} className={`w-full mt-2 h-fit p-3`}>
+
+          <Button 
+          onClick={handledashboard}
+          variant={"primary"} className={`w-full mt-2 h-fit p-3`}>
             Log in
           </Button>
+
           <div className="flex mt-4  justify-center w-full ">
             <p className="text-gray-500">Are you new here? </p>
             <a href="/signup" className="text-green-500 font-medium ml-2">
               Create an account
             </a>
+            
           </div>
         </form>
       </div>

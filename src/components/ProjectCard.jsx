@@ -1,15 +1,27 @@
 import { CreditCard, MapPin, Users } from "lucide-react";
 import { Tag } from "./ui/Tag";
+import { useNavigate } from "react-router-dom";
 
 function ProjectCard({ project }) {
+
+  const navigate = useNavigate();
+
+  const handleViewMore = () => {
+    navigate("/moredetails")
+  };
+
+  const handleInvest = () => {
+    navigate("/signin");
+  };
+
+
   return (
     <div className="bg-white rounded-lg relative shadow overflow-hidden">
       <Tag
-        className={`h-fit px-2 text-xs absolute top-4 right-4 inline-block   py-1 ${
-          project.funded
-            ? "bg-green-100/80 text-green-700/80 backdrop-blur-sm"
-            : "bg-red-100 text-red-700"
-        }`}
+        className={`h-fit px-2 text-xs absolute top-4 right-4 inline-block   py-1 ${project.funded
+          ? "bg-green-100/80 text-green-700/80 backdrop-blur-sm"
+          : "bg-red-100 text-red-700"
+          }`}
       >
         {project.funded ? "Funded" : "Not Funded"}
       </Tag>
@@ -52,6 +64,26 @@ function ProjectCard({ project }) {
             Total: GHS
             {project.total.toFixed(2)}
           </span>
+        </div>
+
+        <div>
+          <button
+            onClick={handleViewMore}
+            className="h-8 w-24 absolute bottom-28 right-4 rounded-full
+              border-green-400 hover:bg-green-400 hover:text-white border 
+              flex items-center justify-center ">
+            view more
+          </button>
+        </div>
+
+        <div>
+          <button
+            onClick={handleInvest}
+            className="h-6 w-20 absolute bottom-14 right-4 rounded-full
+              border-green-400 hover:bg-green-400 hover:text-white border 
+              flex items-center justify-center ">
+            Invest
+          </button>
         </div>
       </div>
     </div>
