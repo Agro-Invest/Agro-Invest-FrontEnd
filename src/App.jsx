@@ -12,13 +12,16 @@ import Dashboard from "./pages/dashboard/pages/dashboard";
 import ProjectMgt from "./pages/dashboard/pages/projectMgt";
 import FinancialServices from "./pages/dashboard/pages/financialServices";
 import SelectRole from "./pages/selectRole";
-import CreateAccount from "./pages/createAccount";
+import CreateAccount from "./pages/auth/createAccount";
 import MoreDetails from "./pages/moreDetails";
-import SignUp from "./pages/auth/signup";
 import SignIn from "./pages/auth/signIn";
 import Browse from "./pages/browse";
+// import AuthLayout from "./pages/auth/layouts/authLayout";
+
 
 const router = createBrowserRouter([
+
+
   {
     path: "/",
     element: <RootLayout />,
@@ -61,14 +64,27 @@ const router = createBrowserRouter([
       }
     ],
   },
+
+  
+    // element: <AuthLayout/>,
+    // children: 
+
+      {
+        path: "signin",
+        element: <SignIn />,
+      },
+      {
+        path: "createaccount",
+        element: <CreateAccount />,
+      },
+    
+  
+
   {
-    path: "signin",
-    element: <SignIn/>
+    path: "selectrole",
+    element: <SelectRole />,
   },
-  {
-    path: "signup",
-    element: <SignUp/>
-  },
+
   {
     path: "/dashboard",
     element: <DashboardLayout />,
@@ -87,14 +103,7 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "selectrole",
-    element: <SelectRole />,
-  },
-  {
-    path: "createaccount",
-    element: <CreateAccount />,
-  },
+  
 ]);
 
 function App() {

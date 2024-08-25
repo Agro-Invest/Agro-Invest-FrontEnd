@@ -5,7 +5,6 @@ import Grid from "../icons/grid.png"
 import List from "../icons/list.png"
 import AddIcon from "../icons/addIcon.png"
 import Location from "../icons/location.png"
-// import ProjectCard from "../../components/projectCard"
 
 
 const MainCard = () => {
@@ -68,6 +67,8 @@ const MainCard = () => {
     closeSecondModal();
   };
 
+  
+
 
 
 
@@ -128,9 +129,9 @@ const MainCard = () => {
       </div>
       <hr className="h-[5px]" />
 
-      {/* <div>
-          <ProjectCard className="size-10"/>
-      </div> */}
+      <div >
+      
+      </div>
 
       {isModalOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[100]">

@@ -10,6 +10,10 @@ const Navbar = () => {
     navigate("/signin");
   };
 
+  const handleSignUp = () => {
+    navigate("/createaccount");
+  };
+
   return (
     <div className="bg-[#F2F2F7] h-[80px] w-full overflow-x-hidden">
       <Container className={`flex justify-between w-full h-full items-center`}>
@@ -48,10 +52,12 @@ const Navbar = () => {
             </span>
           </Button>
 
-          <Button variant={"primary"}>
-            <a href="/selectrole" className="w-full h-full">
+          <Button 
+          onClick={handleSignUp}
+          variant={"primary"}>
+            <span className="w-full h-full">
               Sign up
-            </a>
+              </span>
           </Button>
         </div>
 
